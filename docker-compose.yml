@@ -9,7 +9,7 @@ services:
         command:
             - run
     action-server:
-        image: rasa/rasa-sdk:1.10.2
+        image: rasa/rasa-sdk:1.10.3
         volumes:
             - ./rasa1:/app/actions
         ports:

@@ -8,16 +8,14 @@
 * greet
   - utter_greet
 * mood_unhappy
-  - utter_cheer_up
+  - action_hello_world
   - utter_did_that_help
 * affirm
   - utter_happy
 
 ## sad path 2
-* greet
-  - utter_greet
 * mood_unhappy
-  - utter_cheer_up
+  - action_hello_world
   - utter_did_that_help
 * deny
   - utter_goodbye
