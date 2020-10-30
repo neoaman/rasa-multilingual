@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <a href="german.html"><h1>German</h1></a>
+  <a href="english.html"><h1>English</h1></a>
+  
+  <div id="webchat"></div>
+  <script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
+  
+  <script>
+    WebChat.default.init({
+      selector: "#webchat",
+      initPayload: "hi",
+      customData: {"language": "de"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+      socketUrl: "http://localhost:5006/",
+      socketPath: "/socket.io/",
+      title: "Rasa in German",
+      subtitle: "This chatbot is for german Language",
+      params: {"storage": "session"} // can be set to "local"  or "session". details in storage section.
+    })
+  </script>
+
+</body>
+</html>
