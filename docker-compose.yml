@@ -1,7 +1,7 @@
 version: '3.0'
 services:
     rasa:
-        image: rasa/rasa:1.10.8
+        image: rasa/rasa:1.10.14
         ports:
             - 5005:5005
         volumes:
@@ -15,7 +15,7 @@ services:
         ports:
             - 5055:5055
     rasa2:
-        image: rasa/rasa:1.10.8
+        image: rasa/rasa:1.10.14
         ports:
             - 5006:5005
         volumes:
