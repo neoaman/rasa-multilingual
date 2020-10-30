@@ -6,8 +6,8 @@ services:
             - 5005:5005
         volumes:
             - ./rasa1:/app
-        command:
-            - run
+        command: run --enable-api --cors "*"
+            # - run
     action-server:
         image: rasa/rasa-sdk:1.10.3
         volumes:
@@ -20,8 +20,8 @@ services:
             - 5006:5005
         volumes:
             - ./rasa2/:/app
-        command:
-            - run
+        command: run --enable-api --cors "*"
+            # - run
     action-server2:
         image: rasa/rasa-sdk:1.10.3
         volumes:
