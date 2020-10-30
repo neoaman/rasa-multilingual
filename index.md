@@ -1,8 +1,13 @@
-## Welcome to GitHub Pages
+## Welcome to Rasa Multilingual Chatbot
+You can use the template in your project to create an multilingual chatbot using RASA.
 
-You can use the [editor on GitHub](https://github.com/neoaman/rasa-multilingual/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Prerequistis :
+* docker
+* docker-compose (to run mutiple docker)
+* Basic operational idea to create a chatbot in RASA (e.g. basic idea to modify files nlu.md, story.md, domain.yml, actions.py)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Run Cloned Repository on local machine
+``` sudo docker-compose up ```
 
 ### Markdown
 
