@@ -9,4 +9,5 @@ You can use the template in your project to create an multilingual chatbot using
 3. Basic operational idea to create a chatbot in RASA (e.g. basic idea to modify files nlu.md, story.md, domain.yml, actions.py)
 
 ## Run Cloned Repository on local machine
-```$ sudo docker-compose up ```
+```$ sudo docker-compose up -d```
+This will download 2 docker images and run 4 docker containers `2(en,de) x (Action server + RASA core)`
