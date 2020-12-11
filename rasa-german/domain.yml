@@ -1,0 +1,33 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+actions:
+  - action_hello_world
+responses:
+  utter_greet:
+  - text: "Hallo! Wie geht es dir?"
+
+  utter_cheer_up:
+  - text: "Hier ist etwas, um dich aufzuheitern :"
+    image: "https://www.w3schools.com/w3css/img_lights.jpg"
+
+  utter_did_that_help:
+  - text: "Hat dir das geholfen?"
+
+  utter_happy:
+  - text: "Großartig, mach weiter!"
+
+  utter_goodbye:
+  - text: "Tschüss"
+
+  utter_iamabot:
+  - text: "Ich bin ein Bot, angetrieben von Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

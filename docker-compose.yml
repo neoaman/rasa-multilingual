@@ -1,0 +1,47 @@
+version: '3.0'
+services:
+    rasa-english:
+        image: rasa/rasa:1.10.14
+        ports:
+            - 5005:5005
+        volumes:
+            - ./rasa-english:/app
+        command: run --enable-api --cors "*"
+            # - run
+    action-server:
+        image: rasa/rasa-sdk:1.10.3
+        volumes:
+            - ./rasa-english:/app/actions
+        ports:
+            - 5055:5055
+    rasa-german:
+        image: rasa/rasa:1.10.14
+        ports:
+            - 5006:5005
+        volumes:
+            - ./rasa-german:/app
+        command: run --enable-api --cors "*"
+            # - run
+    action-server2:
+        image: rasa/rasa-sdk:1.10.3
+        volumes:
+            - ./rasa-german:/app/actions
+        ports:
+            - 5056:5055
+    
+    nginx:
+        container_name: nginx_serv
+        image: nginx
+        ports:
+        - 80:80
+        - 443:443
+        depends_on: 
+        - rasa-english
+        - rasa-german
+        volumes:
+        - ./nginx:/etc/nginx/conf.d
+        #I kept my SSL certs in a certs folder in project directory (Make sure to include this in .gitignore)
+        - ./certs:/etc/letsencrypt/live/aman.today
+        - ./certs/medulla:/etc/letsencrypt/live/medulla.aman.today
+
+
